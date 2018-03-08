@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Swapi</title>
+    <title>Dark Sky</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -14,10 +14,13 @@
 </head>
 
 <body>
- 
-<input type="text" id="userLocation">
-<button id="userButton">Search!</button>
-<div id="weather-container"></div>
+ <div class="header d-block mx-auto mt-4 mb-3 m-5">
+     <h1 class=" text-center mb-2">Dark Sky App</h1>
+    <input type="text" id="userLocation" class=" input-group text-center" width="200px">
+    <button id="userButton" class="btn btn-info m-2 d-block mx-auto">Search!</button>
+ </div>
+
+<div id="weather-container" class=" container-fluid"></div>
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
         crossorigin="anonymous"></script>

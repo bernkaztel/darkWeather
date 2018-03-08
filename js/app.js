@@ -27,17 +27,21 @@ const getWeather = (wUrl) => {
                 dairyForcast.forEach(day => {
                     console.log(day);
                     let template = `
-                    <h3>${unixDateToCurrentDate(day.time)}</h3>
-                    <span>Icon: ${day.icon}</span>
-                    <span>Temperature-high: ${day.temperatureHigh} and Temperature-min: ${day.temperatureMin}</span>
-                    <span>Humidity: ${day.humidity}</span>
-                    <span>UV index: ${day.uvIndex}</span>
-                    <span>Wind: ${day.windSpeed}</span>
-                    <span>Pressure: ${day.pressure}</span>`;
+                    <div class="card text-white bg-info mb-3 m-3 d-block mx-auto col-8 offset-2">
+                    <div class="card-body text-center">
+                    <h3  class="card-title m-1">${unixDateToCurrentDate(day.time)}</h3>
+                    <img src="assets/images/${day.icon}.svg"></img>
+                    <p>Temperature-high: ${day.temperatureHigh} and Temperature-min: ${day.temperatureMin}</span>
+                    <p>Humidity: ${day.humidity}</p>
+                    <p>UV index: ${day.uvIndex}</p>
+                    <p>Wind: ${day.windSpeed}</p>
+                    <p>Pressure: ${day.pressure}</p>
+                    </div>
+                    </div>`;
                     let container = document.getElementById('weather-container');
                     var newDiv = document.createElement("div");
+                    newDiv.innerHTML = template;
                     container.append(newDiv);
-                    console.log(template);
                 });
 
             })
